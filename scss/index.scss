@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Lato:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import "responsiveMixin";
+
+$black: #232426;
+$drop-shadow: #23242650;
+$white: #fdfdfd;
+$accent-white: #e3e3e3;
+$accent-black: #2b2a2a;
+$gray: #646464;
+$red: #e24f4f;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1px;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  color: $black;
+  font-size: 2rem;
+  // font-family: "Oswald", sans-serif;
+  font-family: "Lato", sans-serif;
+  background-color: $white;
+}
+main {
+  max-width: 1500px;
+  margin: 10rem auto;
+  padding: 0 10rem;
+  @include desktop {
+    padding: 0 8rem;
+  }
+  @include laptop {
+    padding: 0 5rem;
+  }
+  @include tablet {
+    padding: 0 5rem;
+  }
+  @include phone {
+    padding: 0 2rem;
+  }
+}
+
+@import "_components.scss";
+@import "navigation.scss";
+@import "footer.scss";
+@import "./pages-style/_home.scss";
+@import "./pages-style/_about.scss";
+@import "./pages-style/_forum.scss";
+@import "./pages-style/_contact.scss";
+@import "./pages-style/_joinClub.scss";
+@import "./pages-style/events.scss";

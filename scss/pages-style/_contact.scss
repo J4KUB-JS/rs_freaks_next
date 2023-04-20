@@ -1,0 +1,30 @@
+.contactSection {
+  display: grid;
+  gap: 10rem;
+  grid-template-columns: 1fr 1fr;
+  @include laptop {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+.contactDetails {
+  margin-top: 10rem;
+  display: grid;
+  row-gap: 5rem;
+  column-gap: 10rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  @include laptop {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+  }
+  @include tablet {
+    max-width: 600px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.additionalIMG {
+  @include laptop {
+    display: none;
+  }
+}

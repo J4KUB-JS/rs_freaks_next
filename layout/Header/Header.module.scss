@@ -1,0 +1,130 @@
+@import "/scss/responsiveMixin";
+@import "/scss/colors";
+
+.headerWrapper {
+  z-index: 3;
+  position: relative;
+  width: 100%;
+  background-color: $white;
+  display: grid;
+  grid-template-columns: 60px auto auto;
+  padding: 1em 2em;
+  align-items: center;
+
+  @include laptop {
+    grid-template-columns: 60px auto;
+  }
+}
+
+.listItemWrapper {
+  font-weight: 500;
+  margin: 0.1em 3em;
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  & .listElementUnderline {
+    animation: 0.3s linear forwards underlineAnimation;
+  }
+  @include laptop {
+    display: none;
+  }
+}
+
+.responsiveMenuWrapper {
+  z-index: 2;
+  display: none;
+
+  @include laptop {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100vw;
+    height: 100vh;
+    padding: 2em 5rem;
+    position: absolute;
+    top: 90px;
+    background-color: $white;
+    font-weight: 500;
+    font-size: 2rem;
+    list-style: none;
+    text-transform: uppercase;
+
+    & .listElementUnderline {
+      animation: 0.3s 0.4s linear forwards underlineAnimation;
+    }
+  }
+}
+
+.listElement {
+  position: relative;
+  color: $black;
+  text-decoration: none;
+}
+
+.listElementUnderline {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  background-color: $black;
+  height: 2px;
+  width: 0%;
+}
+
+.menuSlideInAnimation {
+  animation: 0.3s ease-in containerSlideInAnimation;
+}
+
+.menuSlideOutAnimation {
+  animation: 0.3s ease-out containerSlideOutAnimation;
+}
+
+@keyframes containerSlideOutAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes containerSlideInAnimation {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes underlineAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.actionButtonLinkWrapper {
+  justify-self: flex-end;
+
+  @include laptop {
+    display: none;
+  }
+}
+
+.actionButton {
+  cursor: pointer;
+  background-color: $white;
+  border: 3px solid $black;
+  padding: 0.3em 0.8em;
+  font-size: 2rem;
+  font-weight: 800;
+
+  @include laptop {
+    display: none;
+  }
+}

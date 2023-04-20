@@ -1,0 +1,28 @@
+.carDescriptionOne {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12rem;
+  margin: 10rem 0;
+  align-items: center;
+
+  @include tablet {
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}
+.description {
+  display: flex;
+  flex-direction: column;
+}
+.ImgAdditionalOne {
+  @include tablet {
+    max-width: 500px;
+    grid-row: 2/3;
+  }
+}
+.BGTextAdditional {
+  @include laptop {
+    display: none;
+  }
+}

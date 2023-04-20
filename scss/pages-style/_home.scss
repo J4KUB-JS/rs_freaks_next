@@ -1,0 +1,71 @@
+.headlineSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.introductionSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr auto;
+  column-gap: 8rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    column-gap: 0rem;
+  }
+
+  .BGTextAdditional {
+    justify-self: end;
+    grid-column: 1/3;
+  }
+
+  .TGAdditionalOne {
+    margin-top: 6rem;
+    @include tablet {
+      margin-top: 0;
+      grid-column: 1/3;
+      margin: 1rem 0 5rem;
+    }
+  }
+  .ImgAdditionalOne {
+    justify-self: end;
+    @include tablet {
+      justify-self: center;
+    }
+  }
+
+  .BGTextAdditionalTwo {
+    justify-self: start;
+    grid-column: 1/3;
+  }
+  .TGAdditionalTwo {
+    margin-top: 6rem;
+    justify-self: end;
+
+    @include tablet {
+      justify-self: start;
+      margin-top: 0rem;
+      grid-column: 1/3;
+      // grid-row: 2/3;
+      margin: 1rem 0 5rem;
+    }
+  }
+  .ImgAdditionalTwo {
+    justify-self: start;
+    @include tablet {
+      justify-self: center;
+      // width: 95%;
+    }
+  }
+}
+
+.callToActionSection {
+  margin-top: 7rem;
+}
+
+.cta-image {
+  margin-top: -6rem;
+  margin-bottom: 5rem;
+}

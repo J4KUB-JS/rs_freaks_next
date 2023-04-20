@@ -1,0 +1,40 @@
+$phone-width: 320px;
+$tablet-width: 700px;
+$laptop-width: 1000px;
+$desktop-width: 1200px;
+
+// 320px — 480px: Mobile devices
+// 481px — 768px: iPads, Tablets
+// 769px — 1024px: Small screens, laptops
+// 1025px — 1200px: Desktops, large screens
+// 1201px and more —  Extra large screens, TV
+
+@mixin phone {
+  @media (max-width: 650px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin big-screen {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
