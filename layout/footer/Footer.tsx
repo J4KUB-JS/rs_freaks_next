@@ -1,43 +1,42 @@
 import styles from "./Footer.module.scss";
+import { FooterGroupItem } from "./components/FooterGroupItem/FooterGroupItem";
 
 export const Footer = () => {
   return (
-    <footer>
-      <div>
-        <div>Contact</div>
-        <ul>
-          <li>email: rs-freaks@gmail.com</li>
-          <li>phone: + 34 (231) 312 432 423</li>
-        </ul>
+    <footer className={styles.footer}>
+      <div className={styles.footerGroupsWrapper}>
+        <FooterGroupItem
+          groupItems={["Email: rs-freaks@mail.com", "Phone: +48 456 293 678"]}
+          groupTitle="Contact"
+        />
+        <FooterGroupItem
+          groupItems={[
+            "Home",
+            "About",
+            "Cars",
+            "Events",
+            "Form",
+            "Blog",
+            "Contact",
+          ]}
+          groupTitle="Links"
+          groupItemClass={styles.linksGrid}
+        />
+        <FooterGroupItem
+          groupItems={["FB", "IG", "YT"]}
+          groupTitle="Social Media"
+          groupItemClass={styles.linksFlex}
+        />
+        <FooterGroupItem groupTitle="News Letter">
+          <div className={styles.newsLetterWrapper}>
+            <input placeholder="example@mail.com" />
+            <button>Join</button>
+          </div>
+        </FooterGroupItem>
       </div>
-      <div>
-        <div>Links</div>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Cars</li>
-          <li>Events</li>
-          <li>Form</li>
-          <li>Blog</li>
-          <li>Contact</li>
-        </ul>
+      <div className={styles.copyRight}>
+        ©2023 Design and Developed by &lt;CODE JS&gt;
       </div>
-      <div>
-        <div>Social Media</div>
-        <ul>
-          <li>FB</li>
-          <li>IG</li>
-          <li>YT</li>
-        </ul>
-      </div>
-      <div>
-        <div>News Letter</div>
-        <div>
-          <input placeholder="example@mail.com" />
-          <button>Join</button>
-        </div>
-      </div>
-      <div>©2023 Design and developed by &lt;CODE JS&gt;</div>
     </footer>
   );
 };

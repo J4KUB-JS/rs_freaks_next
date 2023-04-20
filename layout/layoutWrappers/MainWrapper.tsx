@@ -1,6 +1,5 @@
 import { Footer } from "../footer/Footer";
 import { Header } from "../Header/Header";
-import { NavigationBar } from "../navigationBar/NavigationBar";
 
 interface MainWrapperInterface {
   children?: React.ReactNode;
