@@ -8,6 +8,7 @@ export const Footer = () => {
         <FooterGroupItem
           groupItems={["Email: rs-freaks@mail.com", "Phone: +48 456 293 678"]}
           groupTitle="Contact"
+          groupItemClass={styles.contactWrapper}
         />
         <FooterGroupItem
           groupItems={[

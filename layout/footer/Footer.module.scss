@@ -12,11 +12,13 @@
 }
 
 .footerGroupsWrapper {
+  padding: 0 10rem;
   margin: 0 0 2em;
   display: grid;
   row-gap: 5em;
   column-gap: 5em;
-  grid-template-columns: repeat(4, auto);
+  max-width: 1500px;
+  grid-template-columns: repeat(4, 1fr);
   @include laptop {
     row-gap: 3em;
     column-gap: 6em;
@@ -71,4 +73,8 @@
     border: none;
     padding: 0.2em 1em;
   }
+}
+
+.contactWrapper {
+  min-width: 200px;
 }

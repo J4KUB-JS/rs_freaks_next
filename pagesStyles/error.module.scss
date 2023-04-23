@@ -1,0 +1,34 @@
+@import "/scss/responsiveMixin";
+@import "/scss/colors";
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(2, auto);
+  column-gap: 10rem;
+  row-gap: 2rem;
+}
+
+// .textGrid {
+//   grid-column: 1/3;
+// }
+
+.sectionTitle {
+  color: red;
+  font-size: 7rem;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+}
+
+.backgroundText {
+  font-size: 10rem;
+  color: $accent-white;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  align-self: end;
+  justify-self: end;
+}
+
+.imageStyles {
+  position: relative;
+}

@@ -14,7 +14,7 @@ export const FooterGroupItem = ({
   children,
 }: FooterGroupItemProps) => {
   return (
-    <div className={styles.groupWrapper}>
+    <div>
       <div className={styles.groupTitle}>{groupTitle}</div>
       {!children && (
         <ul
