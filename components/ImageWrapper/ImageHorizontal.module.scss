@@ -1,0 +1,13 @@
+.HorizontalImageWrapper {
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  // filter: drop-shadow(10px 15px 20px $drop-shadow);
+}
+
+.imgHorizontal {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  position: relative;
+}

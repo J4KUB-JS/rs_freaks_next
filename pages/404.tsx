@@ -1,29 +1,33 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { ArrowForward } from "@mui/icons-material";
 
 import styles from "../pagesStyles/error.module.scss";
+import { ImageHorizontal } from "@/components/ImageWrapper/ImageHorizontal";
+
+//TODO: make images exact ratio we need
+//add wrapper for sub text and arrow
 
 const NoPage = () => {
   return (
     <div className={styles.sectionWrapper}>
       <div className={styles.gridLayout}>
-        <div>
+        <div className={styles.textWrapper}>
           <span className={styles.sectionTitle}>
             Looks like you fell out of the track
           </span>
-          <span>
+          <Link href={`/`} className={styles.subText}>
             <p>Let’s go back to home page</p>
-            <ArrowForward />
-          </span>
+            <ArrowForward className={styles.icon} />
+          </Link>
         </div>
         <span className={styles.backgroundText}>Hmm...</span>
-        <Image
-          className={styles.imageStyles}
-          src="/assets/images/mercedes-amg.jpg"
-          alt="Picture of the author"
-          layout="fill"
-          objectFit="cover"
+        <ImageHorizontal
+          imgSrc={"/assets/images/mercedes-amg.jpg"}
+          altText="ds"
+          wrapperClassName={styles.imageWrapperStyles}
+          imgClassName={styles.imgStyles}
         />
       </div>
     </div>

@@ -16,8 +16,8 @@ body {
   background-color: #fdfdfd; }
 
 main {
-  max-width: 1500px;
-  margin: 10rem auto;
+  max-width: 1200px;
+  margin: 5rem auto;
   padding: 0 10rem; }
   @media (max-width: 1200px) {
     main {

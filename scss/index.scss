@@ -27,8 +27,8 @@ body {
   background-color: $white;
 }
 main {
-  max-width: 1500px;
-  margin: 10rem auto;
+  max-width: 1200px;
+  margin: 5rem auto;
   padding: 0 10rem;
   @include desktop {
     padding: 0 8rem;

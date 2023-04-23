@@ -29,7 +29,7 @@ export const Header = ({ subPages }: HeaderProps) => {
   };
 
   return (
-    <>
+    <header>
       <div className={styles.headerWrapper}>
         <Link href={`/`} onClick={() => changeTabHandler("home")}>
           <Image
@@ -39,7 +39,7 @@ export const Header = ({ subPages }: HeaderProps) => {
             height={50}
           />
         </Link>
-        <div className={styles.listItemWrapper}>
+        <nav className={styles.listItemWrapper}>
           {subPages.map((subPage) => (
             <li key={subPage} onClick={() => changeTabHandler(subPage)}>
               <Link
@@ -53,7 +53,7 @@ export const Header = ({ subPages }: HeaderProps) => {
               </Link>
             </li>
           ))}
-        </div>
+        </nav>
         <Link
           className={styles.actionButtonLinkWrapper}
           href={`/register`}
@@ -85,6 +85,6 @@ export const Header = ({ subPages }: HeaderProps) => {
           ))}
         </div>
       )}
-    </>
+    </header>
   );
 };

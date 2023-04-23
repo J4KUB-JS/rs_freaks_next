@@ -1,31 +1,37 @@
 import Image from "next/image";
-
+import styles from "./ImageHorizontal.module.scss";
+import classNames from "classnames";
 interface ImageInterface {
-  imgSrc: any;
+  imgSrc: string;
   altText: string;
-  additionalClass?: string;
+  wrapperClassName?: string;
+  imgClassName?: string;
 }
 
 export const ImageHorizontal = ({
   imgSrc,
   altText,
-  additionalClass,
+  wrapperClassName,
+  imgClassName,
 }: ImageInterface) => {
-  const classString = !additionalClass
-    ? "imgContainerH"
-    : `imgContainerH ${additionalClass}`;
+  const passedWrapperClass = wrapperClassName ? wrapperClassName : "";
+
+  const passedImgClass = imgClassName ? imgClassName : "";
+
   return (
-    <div className={classString}>
+    <div
+      className={classNames(styles.HorizontalImageWrapper, {
+        [passedWrapperClass]: wrapperClassName,
+      })}
+    >
       <Image
-        style={{
-          width: "100%",
-          height: "auto",
-          position: "relative",
-        }}
+        className={classNames(styles.imgHorizontal, {
+          [passedImgClass]: imgClassName,
+        })}
         src={imgSrc}
         alt={altText}
         height={100}
-        width={100}
+        width={1}
         unoptimized={true}
       />
     </div>
