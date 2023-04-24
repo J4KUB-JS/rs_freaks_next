@@ -92,3 +92,18 @@
     top: 0px;
   }
 }
+
+.img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-image: url("/assets/images/mercedes-amg.jpg");
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  grid-column: 1/3;
+  width: 100%;
+  height: 300px;
+}

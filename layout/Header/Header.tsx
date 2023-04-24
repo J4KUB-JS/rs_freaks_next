@@ -31,7 +31,7 @@ export const Header = ({ subPages }: HeaderProps) => {
   return (
     <header>
       <div className={styles.headerWrapper}>
-        <Link href={`/`} onClick={() => changeTabHandler("home")}>
+        <Link href={`/`} onClick={() => setSelectedTab("home")}>
           <Image
             src={"/assets/icons/logo.svg"}
             alt={"logo of rs freaks club"}
@@ -56,7 +56,7 @@ export const Header = ({ subPages }: HeaderProps) => {
         </nav>
         <Link
           className={styles.actionButtonLinkWrapper}
-          href={`/register`}
+          href={`/login`}
           onClick={() => changeTabHandler("")}
         >
           <button className={styles.actionButton}>Join Club!</button>

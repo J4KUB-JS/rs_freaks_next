@@ -1,0 +1,110 @@
+@import "/scss/responsiveMixin";
+@import "/scss/colors";
+
+.gridLayout {
+  padding: 0 0 0 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  @include laptop {
+    padding: 0 0 0 5rem;
+  }
+  @include laptop {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin: 5rem 0;
+  }
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 320px;
+}
+
+.heading {
+  h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
+
+.inputGroupWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+
+  .input {
+    font-size: 1.7rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid $gray;
+    color: $gray;
+    font-weight: 300;
+  }
+
+  .inputLabel {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    text-decoration: underline $gray 1px;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+.buttonGroupWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  button {
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+
+    &:nth-child(1) {
+      background-color: $accent-black;
+      color: $white;
+    }
+    &:nth-child(2) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      background-color: $white;
+      border: 1px solid $accent-black;
+      color: $accent-black;
+
+      .icon {
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.imageWrapperStyles {
+  transform: scale(1.2);
+  @include tablet {
+    display: none;
+  }
+}

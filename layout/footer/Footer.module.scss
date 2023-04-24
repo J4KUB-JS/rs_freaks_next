@@ -2,6 +2,9 @@
 @import "/scss/colors";
 
 .footer {
+  position: relative;
+  z-index: 2;
+  margin-top: 10rem;
   padding-top: 2em;
   width: 100%;
   background-color: $black;

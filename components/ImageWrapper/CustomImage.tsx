@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./ImageHorizontal.module.scss";
+import styles from "./CustomImage.module.scss";
 import classNames from "classnames";
 interface ImageInterface {
   imgSrc: string;
@@ -8,7 +8,7 @@ interface ImageInterface {
   imgClassName?: string;
 }
 
-export const ImageHorizontal = ({
+export const CustomImage = ({
   imgSrc,
   altText,
   wrapperClassName,
@@ -20,17 +20,17 @@ export const ImageHorizontal = ({
 
   return (
     <div
-      className={classNames(styles.HorizontalImageWrapper, {
+      className={classNames(styles.customImageWrapper, {
         [passedWrapperClass]: wrapperClassName,
       })}
     >
       <Image
-        className={classNames(styles.imgHorizontal, {
+        className={classNames(styles.customImage, {
           [passedImgClass]: imgClassName,
         })}
         src={imgSrc}
         alt={altText}
-        height={100}
+        height={1}
         width={1}
         unoptimized={true}
       />
